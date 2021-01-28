@@ -43,7 +43,7 @@ const sw = Swarm(config);
    * The channel we are connecting to.
    * Peers should discover other peers in this channel
    */
-  sw.join('our-fun-channel')
+  sw.join('treatment_chain')
 
   sw.on('connection', (conn, info) => {
     // Connection id

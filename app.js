@@ -16,22 +16,6 @@ let connSeq = 0
 const myId = crypto.randomBytes(32)
 console.log('Your identity: ' + myId.toString('hex'))
 
-// // reference to redline interface
-// let rl
-// /**
-//  * Function for safely call console.log with readline interface active
-//  */
-// function log () {
-//   if (rl) {
-//     rl.clearLine()    
-//     rl.close()
-//     rl = undefined
-//   }
-//   for (let i = 0, len = arguments.length; i < len; i++) {
-//     console.log(arguments[i])
-//   }
-// //   askUser()
-// }
 /** 
  * Default DNS and DHT servers
  * This servers are used for peer discovery and establishing connection
@@ -76,14 +60,6 @@ const sw = Swarm(config);
         console.log('exception', exception)
       }
     }
-
-    // conn.on('data', data => {
-    //   // Here we handle incomming messages
-    //   log(
-    //     'Received Message from peer ' + peerId,
-    //     '----> ' + data.toString()
-    //   )
-    // })
 
     conn.on('close', () => {
       // Here we handle peer disconnection
